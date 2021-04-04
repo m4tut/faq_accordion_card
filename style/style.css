@@ -17,6 +17,7 @@
 
     /* Dividers */
     --lightGrayishBlue: hsl(240, 5%, 91%);
+    --white: hsl(0, 0%, 95%);
 }
 
 *,
@@ -55,10 +56,11 @@ body {
     width: 920px;
     display: grid;
     grid-template-columns: 50% 50%;
-    background-color: var(--lightGrayishBlue);
+    background-color: var(--white);
     border-radius: 20px;
 }
 
+/* img */
 .block_img {
     width: 100%;
     height: auto;
@@ -71,7 +73,6 @@ body {
     width: 191px;
     height: 184px;
     position: absolute;
-    display: block;
     top: 205px;
     left: -115px;
 }
@@ -90,7 +91,6 @@ body {
     width: 472px;
     height: 359px;
     position: absolute;
-    display: block;
     top: 70px;
     left: -85px;
 }
@@ -102,7 +102,78 @@ body {
     width: 966px;
     height: 945px;
     position: absolute;
-    display: block;
     top: -295px;
     left: -575px;
+}
+
+/* content */
+.content_accordion {
+    width: 80%;
+}
+
+.content_title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 70px 0 50px;
+}
+
+.accordion_item {
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--lightGrayishBlue);
+    position: relative;
+}
+
+.item_title {
+    color: var(--veryDarkGrayishBlue);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+    transition: color 0.15s linear;
+    transition-duration: 0.15s;
+}
+
+.item_title::after {
+    content: '';
+    background: url(../images/icon-arrow-down.svg) no-repeat;
+    background-size: cover;
+    width: 10px;
+    height: 7px;
+    position: absolute;
+    top: 4px;
+    right: 15px;
+    z-index: 1;
+}
+
+.item_title:hover {
+    cursor: pointer;
+    color: var(--softRed);
+    transition: color 0.15s linear;
+}
+
+.title_active {
+    font-weight: 700;
+    color: var(--veryDarkDesaturatedBlue);
+    transition: .5s;
+    transition: color 0.15s linear;
+    transition-duration: 0.15s;
+    transition: transform .5s;
+}
+
+.title_active::after {
+    transform: rotate(180deg);
+    transition: transform .5s;
+}
+
+.item_text {
+    display: none;
+    height: 0;
+    color: var(--darkGrayishBlue);
+    line-height: 15px;
+    margin-bottom: 15px;
+}
+
+.text_active {
+    display: block;
+    height: 100%;
 }
