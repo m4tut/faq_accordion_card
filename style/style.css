@@ -69,7 +69,6 @@ body {
 .block_img::after {
     content: '';
     background: transparent url(../images/illustration-box-desktop.svg) no-repeat;
-    background-size: cover;
     width: 191px;
     height: 184px;
     position: absolute;
@@ -87,7 +86,6 @@ body {
 .img_group::after {
     content: '';
     background: url(../images/illustration-woman-online-desktop.svg) no-repeat;
-    background-size: cover;
     width: 472px;
     height: 359px;
     position: absolute;
@@ -98,7 +96,6 @@ body {
 .img_group::before {
     content: '';
     background: url(../images/bg-pattern-desktop.svg) no-repeat;
-    background-size: cover;
     width: 966px;
     height: 945px;
     position: absolute;
@@ -108,7 +105,7 @@ body {
 
 /* content */
 .content_accordion {
-    width: 80%;
+    width: 90%;
 }
 
 .content_title {
@@ -174,4 +171,62 @@ body {
 .text_active {
     max-height: 90px;
     margin-bottom: 15px;
+}
+
+/* media */
+@media (max-width: 1074px) {
+    .center {
+        height: 535px;
+        width: 330px;
+    }
+
+    .faq_block {
+        min-height: 535px;
+        width: 330px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 25% 75%;
+    }
+
+    .block_img::after {
+        display: none;
+    }
+
+    .img_group {
+        overflow: visible;
+    }
+
+    .img_group::after {
+        background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
+        width: 266px;
+        height: 196px;
+        top: -110px;
+        left: 20px;
+    }
+
+    .img_group::before {
+        background: url(../images/bg-pattern-mobile.svg) no-repeat;
+        width: 240px;
+        height: 104px;
+        top: 0;
+        left: 45px;
+    }
+
+    .content_title {
+        text-align: center;
+        margin: 0 0 40px;
+    }
+
+    .block_content {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content_accordion {
+        margin: 0 auto;
+    }
+
+    .item_title {
+        font-size: 0.9rem;
+        width: 95%;
+    }
 }
