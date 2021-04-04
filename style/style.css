@@ -104,6 +104,10 @@ body {
 }
 
 /* content */
+.block_content {
+    margin-left: 10px;
+}
+
 .content_accordion {
     width: 90%;
 }
@@ -112,7 +116,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 2rem;
-    margin: 70px 0 50px;
+    margin: 70px 0 40px;
 }
 
 .accordion_item {
@@ -219,6 +223,7 @@ body {
     .block_content {
         position: relative;
         overflow: hidden;
+        margin-left: 0;
     }
 
     .content_accordion {
