@@ -187,8 +187,7 @@ body {
     .faq_block {
         min-height: 535px;
         width: 330px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 25% 75%;
+        display: block;
     }
 
     .block_img::after {
@@ -217,13 +216,13 @@ body {
 
     .content_title {
         text-align: center;
-        margin: 0 0 40px;
+        margin: 0 0 30px;
     }
 
     .block_content {
         position: relative;
-        overflow: hidden;
         margin-left: 0;
+        padding-top: 130px;
     }
 
     .content_accordion {
