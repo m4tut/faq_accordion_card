@@ -36,10 +36,6 @@ body {
     font-size: 12px;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: 400;
-}
-
-.bg {
-    height: 100%;
     background: linear-gradient(var(--softViolet), var(--softBlue));
 }
 
@@ -52,4 +48,61 @@ body {
     top: 0;
     bottom: 0;
     margin: auto;
+}
+
+.faq_block {
+    min-height: 510px;
+    width: 920px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: var(--lightGrayishBlue);
+    border-radius: 20px;
+}
+
+.block_img {
+    width: 100%;
+    height: auto;
+}
+
+.block_img::after {
+    content: '';
+    background: transparent url(../images/illustration-box-desktop.svg) no-repeat;
+    background-size: cover;
+    width: 191px;
+    height: 184px;
+    position: absolute;
+    display: block;
+    top: 205px;
+    left: -115px;
+}
+
+.img_group {
+    width: auto;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.img_group::after {
+    content: '';
+    background: url(../images/illustration-woman-online-desktop.svg) no-repeat;
+    background-size: cover;
+    width: 472px;
+    height: 359px;
+    position: absolute;
+    display: block;
+    top: 70px;
+    left: -85px;
+}
+
+.img_group::before {
+    content: '';
+    background: url(../images/bg-pattern-desktop.svg) no-repeat;
+    background-size: cover;
+    width: 966px;
+    height: 945px;
+    position: absolute;
+    display: block;
+    top: -295px;
+    left: -575px;
 }
