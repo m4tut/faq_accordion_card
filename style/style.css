@@ -132,6 +132,7 @@ body {
     margin-bottom: 18px;
     transition: color 0.2s linear;
     user-select: none;
+    width: 90%;
 }
 
 .item_title::after {
@@ -188,6 +189,7 @@ body {
         min-height: 535px;
         width: 330px;
         display: block;
+        margin-top: 30px;
     }
 
     .block_img::after {
@@ -217,6 +219,7 @@ body {
     .content_title {
         text-align: center;
         margin: 0 0 30px;
+        font-size: 1.7rem;
     }
 
     .block_content {
@@ -231,6 +234,5 @@ body {
 
     .item_title {
         font-size: 0.9rem;
-        width: 95%;
     }
 }
